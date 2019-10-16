@@ -1,4 +1,4 @@
-### Android proguard-rules.pro 混淆字典的使用
+### 使用
 
 - 生成混淆字典,生成的字典在手机根目录下
 
