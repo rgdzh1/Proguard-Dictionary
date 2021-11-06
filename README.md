@@ -12,10 +12,10 @@
 
 ```properties
 #指定外部模糊字典
--obfuscationdictionary ./proguard-keys.txt
+-obfuscationdictionary proguard-keys.txt
 #指定class模糊字典
--classobfuscationdictionary ./proguard-keys.txt
+-classobfuscationdictionary proguard-keys.txt
 #指定package模糊字典
--packageobfuscationdictionary ./proguard-keys.txt
+-packageobfuscationdictionary proguard-keys.txt
 ```
 
