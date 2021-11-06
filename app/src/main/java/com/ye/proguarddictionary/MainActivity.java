@@ -97,7 +97,8 @@ public class MainActivity extends AppCompatActivity {
         new Thread() {
             @Override
             public void run() {
-                File llLocationPath = Environment.getExternalStoragePublicDirectory("");
+                String llLocationPath = MainActivity.this.getCacheDir().getAbsolutePath() + File.separator;
+                // File llLocationPath = Environment.getExternalStoragePublicDirectory("");
                 File llLocationPathFile = new File(llLocationPath, "Proguard_Dictionary.txt");
                 try {
                     llLocationPathFile.createNewFile();
