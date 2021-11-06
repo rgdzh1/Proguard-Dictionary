@@ -100,17 +100,21 @@ public class MainActivity extends AppCompatActivity {
                 String llLocationPath = MainActivity.this.getCacheDir().getAbsolutePath() + File.separator;
                 // File llLocationPath = Environment.getExternalStoragePublicDirectory("");
                 File llLocationPathFile = new File(llLocationPath, "Proguard_Dictionary.txt");
+                ArrayList<String> strings = new ArrayList<>();
                 try {
                     llLocationPathFile.createNewFile();
                     FileWriter fileWriter = new FileWriter(llLocationPathFile, true);
                     StringBuffer stringBuffer = new StringBuffer();
-                    for (int i = 0; i <= 65535; i++) {
-                        int index = random.nextInt(resourceDicFilter.length() - 10) + 1;
-                        for (int b = 0; b < 6; b++) {
-                            stringBuffer.append(String.valueOf(resoursChars[index + b]));
+                    for (int i = 0; i <= 175535; i++) {
+                        for (int b = 0; b < 4; b++) {
+                            int index = random.nextInt(resourceDicFilter.length() - 1);
+                            stringBuffer.append(String.valueOf(resoursChars[index]));
                         }
                         Log.e(TAG, "写入文件的地址" + stringBuffer.toString());
-                        fileWriter.write(stringBuffer.toString() + "\r\n");
+                        if (!strings.contains(stringBuffer.toString())) {
+                            strings.add(stringBuffer.toString());
+                            fileWriter.write(stringBuffer.toString() + "\r\n");
+                        }
                         stringBuffer.delete(0, stringBuffer.length());
                     }
                     fileWriter.flush();
