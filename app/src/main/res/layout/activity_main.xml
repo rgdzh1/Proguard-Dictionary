@@ -17,7 +17,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@id/btn_create_dic"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="18dp"
         android:background="@android:color/darker_gray" />
 
 
