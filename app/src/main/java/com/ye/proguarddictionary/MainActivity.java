@@ -105,7 +105,7 @@ public class MainActivity extends AppCompatActivity {
                     llLocationPathFile.createNewFile();
                     FileWriter fileWriter = new FileWriter(llLocationPathFile, true);
                     StringBuffer mDictiSB = new StringBuffer();
-                    for (int i = 0; i <= 175535; i++) {
+                    for (int i = 0; i <= 75535; i++) {
                         for (int b = 0; b < 5; b++) {
                             int index = random.nextInt(resourceDicFilter.length() - 1);
                             mDictiSB.append(resoursChars[index]);
